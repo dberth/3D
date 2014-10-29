@@ -1,0 +1,18 @@
+OASISFormat: 0.4
+Name:        3Drenderer
+Version:     0.0.1
+Synopsis:    A toy 3D enderer
+Authors:     Denis Berthod
+License:     BSD-3-clause
+Plugins:     DevFiles (0.4), META (0.4), StdFiles (0.4)
+
+Executable mesh_viewer
+  Path:           src
+  BuildTools:     ocamlbuild
+  BuildDepends:   graphics, gg
+  Build:          true
+  MainIs:         mesh_viewer.ml
+  CompiledObject: best
+  NativeOpt:      -w +9+32..39 -warn-error +9+32..39 -annot -bin-annot
+  ByteOpt:	  -w +9+32..39 -warn-error +9+32..39 -annot -bin-annot
+ 
